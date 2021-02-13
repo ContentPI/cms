@@ -43,6 +43,7 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new HtmlWebPackPlugin({
+      title: 'ContentPI',
       template: './src/index.html',
       filename: './index.html'
     })
