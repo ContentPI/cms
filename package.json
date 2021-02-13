@@ -1,0 +1,63 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.development.js && ts-node src/server",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.production.js",
+    "lint": "eslint . --ext .js,.tsx,.ts",
+    "lint:fix": "eslint . --fix --ext .js,.tsx,.ts",
+    "test": "jest src",
+    "test:coverage": "jest src --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ContentPI/cms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ContentPI/cms/issues"
+  },
+  "homepage": "https://github.com/ContentPI/cms#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-react": "^7.12.13",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "fork-ts-checker-webpack-plugin": "^6.1.0",
+    "html-webpack-plugin": "^5.1.0",
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-loader": "^8.0.17",
+    "ts-node": "^9.1.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.9",
+    "@contentpi/core": "^1.0.5",
+    "@contentpi/utils": "^1.1.1",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack-dev-middleware": "^3.7.3"
+  }
+}
