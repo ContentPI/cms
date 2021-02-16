@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/ContentPI/cms.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Carlos Santana",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ContentPI/cms/issues"
   },
@@ -57,7 +57,6 @@
     "graphql": "^15.5.0",
     "jsonwebtoken": "^8.5.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "webpack-dev-middleware": "^3.7.3"
+    "react-dom": "^17.0.1"
   }
 }
