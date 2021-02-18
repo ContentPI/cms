@@ -1,5 +1,5 @@
 const path = require('path')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -12,6 +12,12 @@ module.exports = {
     publicPath: '/'
   },
   optimization: {
+    minimize: true,
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        target: 'esnext'
+      })
+    ],
     splitChunks: {
       cacheGroups: {
         default: false,
@@ -28,9 +34,10 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         use: {
-          loader: 'ts-loader',
+          loader: 'esbuild-loader',
           options: {
-            transpileOnly: true
+            loader: 'tsx',
+            target: 'esnext'
           }
         },
         exclude: /node_modules/
@@ -41,7 +48,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin(),
+    new ESBuildPlugin(),
     new HtmlWebPackPlugin({
       title: 'ContentPI',
       template: './src/index.html',
