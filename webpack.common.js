@@ -38,7 +38,13 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      // This is to fix the polifylls errors
+      buffer: require.resolve('buffer'),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify')
+    }
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
