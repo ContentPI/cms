@@ -1,9 +1,10 @@
 // Dependencies
 import { render } from 'react-dom'
+import Index from './pages/App'
 
 // Components
 const App = () => {
-  return <div>WELCOME TO REACT APP!</div>
+  return <Index />
 }
 
 render(<App />, document.querySelector('#root'))
