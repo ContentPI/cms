@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { themeCssVars } from '@contentpi/ui-kit/dist/src/theme'
 
 const loginContainerStyles = `
-    background: ${themeCssVars.global?.background.main}
+  background: ${themeCssVars.global?.background.main}
 `
 
 const loginCardStyles = `
-    background: ${themeCssVars.global?.background.paper}
+  background: ${themeCssVars.global?.background.paper}
 `
 
 export const LoginContainer = styled.div`
@@ -21,7 +21,7 @@ export const LoginContainer = styled.div`
 
 export const LoginCard = styled.div`
   max-width: 404px;
-  height: 300px;
+  height: 320px;
   margin: auto;
   border-radius: 5px;
   padding: 4rem;

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, Input, Button } from '@contentpi/ui-kit'
 
 import { LoginCard, LoginContainer, LoginForm, InputControl } from './Login.styled'
